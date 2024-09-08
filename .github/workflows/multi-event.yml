@@ -1,12 +1,13 @@
 name: Multi-event-workflow
+
 on:
   push:
     branches:
-      -main
-      -dev
+      - main
+      - dev
   pull_request:
     branches:
-      -main
+      - main
 
 jobs:
   hello_world:
@@ -14,7 +15,7 @@ jobs:
     steps:
       - name: "Echo Basic Information"
         run: |
-        echo "REF: $GITHUB_REF"
-        echo "Job Id: $GITHUB_JOB"
-        echo "Action: $GITHUB_ACTION"
-        echo "Actor: $GITHUB_ACTOR"
+          echo "REF: $GITHUB_REF"
+          echo "Job Id: $GITHUB_JOB"
+          echo "Action: $GITHUB_ACTION"
+          echo "Actor: $GITHUB_ACTOR"
